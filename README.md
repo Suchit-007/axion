@@ -29,7 +29,7 @@ A comprehensive incident reporting and management platform designed for educatio
 
 ### 📋 Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 - MongoDB Atlas account
 - NextAuth secret key (minimum 32 characters)
@@ -37,22 +37,26 @@ A comprehensive incident reporting and management platform designed for educatio
 ### 🚀 Quick Start
 
 #### 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/axion.git
 cd axion
 ```
 
 #### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 #### 3. Configure environment variables
+
 ```bash
 cp .env.example .env.local
 ```
 
 Edit `.env.local` with your configuration:
+
 ```env
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/dbname
 NEXTAUTH_URL=http://localhost:3000
@@ -60,11 +64,43 @@ NEXTAUTH_SECRET=your-minimum-32-character-super-secret-key
 ```
 
 #### 4. Run the development server
+
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### 📸 Screenshots
+
+#### Dashboard Overview
+
+![Dashboard](screenshots/screenshot-dashboard.png)
+_Real-time statistics, incident summary, and system health monitoring_
+
+#### Incident Reporting Form
+
+![Report Incident](screenshots/screenshot-report.png)
+_Smart form with auto-detection, location capture, and priority suggestion_
+
+#### Live Heatmap
+
+![Heatmap](screenshots/screenshot-map.png)
+_Interactive visualization of incident hotspots across campus_
+
+#### My Incidents
+
+![My Incidents](screenshots/screenshot-incidents.png)
+_Track and manage your reported incidents with real-time status updates_
+
+#### Login Page
+
+![Login](screenshots/screenshot-login.png)
+_Secure authentication with role-based access control_
+
+### 🎥 Demo Video
+
+[Watch the full feature demo](assets/demo-video.mp4) - 2-3 minute walkthrough of all key features
 
 ### 📱 Application Structure
 
@@ -105,6 +141,7 @@ src/
 ### 📊 API Endpoints
 
 #### Incidents
+
 - `POST /api/incidents` - Create new incident
 - `GET /api/incidents` - Get all incidents (paginated)
 - `GET /api/incidents/[id]` - Get incident details
@@ -113,6 +150,7 @@ src/
 - `GET /api/incidents/map` - Get incidents for map visualization
 
 #### Authentication
+
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/[...nextauth]` - NextAuth handlers
 
@@ -150,6 +188,7 @@ npm run start
 ### 🧪 Testing
 
 Test files are located in `src/tests/`:
+
 - `api-tests.js` - API integration tests
 - `mock-drills.js` - Comprehensive test scenarios
 - `mock-incident-drills.ts` - TypeScript test suite
@@ -172,11 +211,11 @@ Test files are located in `src/tests/`:
 
 ### 📄 Environment Variables
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `MONGODB_URI` | MongoDB Atlas connection string | `mongodb+srv://user:pass@cluster.mongodb.net/db` |
-| `NEXTAUTH_URL` | Application base URL | `http://localhost:3000` |
-| `NEXTAUTH_SECRET` | Secret key for JWT signing (min 32 chars) | Generate with `openssl rand -base64 32` |
+| Variable          | Description                               | Example                                          |
+| ----------------- | ----------------------------------------- | ------------------------------------------------ |
+| `MONGODB_URI`     | MongoDB Atlas connection string           | `mongodb+srv://user:pass@cluster.mongodb.net/db` |
+| `NEXTAUTH_URL`    | Application base URL                      | `http://localhost:3000`                          |
+| `NEXTAUTH_SECRET` | Secret key for JWT signing (min 32 chars) | Generate with `openssl rand -base64 32`          |
 
 ### 🔒 Security Notes
 
